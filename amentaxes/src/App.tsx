@@ -14,7 +14,6 @@ function App() {
       <WrapperContentStyle>
         <Header />
         <Users />
-        {/* <Login /> */}
         <Footer />
       </WrapperContentStyle>
     </ApolloProvider>

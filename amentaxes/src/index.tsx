@@ -11,9 +11,25 @@ declare global {
     __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
   }
 }
+function loadUserFromLocalStorage() {
+  const user = JSON.parse(localStorage.getItem("user_info") || "{}");
+
+  if (user === null) {
+    return undefined;
+  }
+
+  return user;
+}
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(rootReducer, composeEnhancers());
+const user = loadUserFromLocalStorage();
+const store = createStore(
+  rootReducer,
+  {
+    user_information: user,
+  },
+  composeEnhancers()
+);
 
 ReactDOM.render(
   <Provider store={store}>

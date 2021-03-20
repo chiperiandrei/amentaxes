@@ -146,7 +146,7 @@ export type LoginMutation = (
   { __typename?: 'Mutation' }
   & { login: (
     { __typename?: 'User' }
-    & Pick<User, 'id' | 'token'>
+    & Pick<User, 'id' | 'token' | 'firstname' | 'lastname' | 'email'>
   ) }
 );
 
@@ -227,6 +227,9 @@ export const LoginDocument = gql`
   login(username: $username, password: $password) {
     id
     token
+    firstname
+    lastname
+    email
   }
 }
     `;

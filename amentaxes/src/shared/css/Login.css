@@ -1,0 +1,11 @@
+.login-form {
+  width: 20%;
+  font-size: 15px;
+}
+.login-form h2 {
+  margin: 0 0 15px;
+}
+.btn {
+  font-size: 15px;
+  font-weight: bold;
+}
