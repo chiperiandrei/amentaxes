@@ -1,0 +1,29 @@
+{
+  "name": "amentaxes-backend",
+  "version": "1.0.0",
+  "description": "Backend server for amentaxes using GraphQL.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chiperiandrei/amentaxes.git"
+  },
+  "author": "Chiperi Andrei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chiperiandrei/amentaxes/issues"
+  },
+  "homepage": "https://github.com/chiperiandrei/amentaxes#readme",
+  "dependencies": {
+    "apollo-server": "^2.18.2",
+    "bcrypt": "^5.0.0",
+    "graphql": "^15.3.0",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "mongoose": "^5.10.10"
+  }
+}
