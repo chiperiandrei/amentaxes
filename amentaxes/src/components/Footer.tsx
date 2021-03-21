@@ -1,9 +1,11 @@
 import React from "react";
 
-export default function Footer() {
+export default function Footer(props: any) {
+  console.log(props);
   return (
-    <div className="fixed-bottom"
-    style={{ gridArea: "3 / 1 / 4 / 2 " }}
+    <div
+      className={props?.willBeFix ? "fixed-bottom" : "bottom"}
+      style={{ gridArea: "3 / 1 / 4 / 2 " }}
     >
       <div
         className="text-center p-3"

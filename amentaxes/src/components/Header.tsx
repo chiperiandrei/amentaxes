@@ -123,33 +123,33 @@ export default function Header() {
                 className="nav-item nav-link dropdown-toggle user-action"
               >
                 <img
-                  src={process.env.PUBLIC_URL + "chiperi.png"}
+                  src={process.env.PUBLIC_URL + "default.svg"}
                   className="avatar"
                   alt="Avatar"
                 />
                 Sign into Amentaxes <b className="caret"></b>
               </a>
               <div className="dropdown-menu">
-                <a href="#" className="dropdown-item">
-                  <input
-                    type="text"
-                    placeholder="email"
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </a>
-                <a href="#" className="dropdown-item">
-                  <input
-                    type="password"
-                    placeholder="******"
-                    onChange={(e) => setPassword(e.target.value)}
-                  />
-                </a>
+                <input
+                  type="text"
+                  placeholder="email"
+                  className="input_login"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <input
+                  type="password"
+                  placeholder="******"
+                  className="input_login"
+                  onChange={(e) => setPassword(e.target.value)}
+                />
                 <div className="divider dropdown-divider"></div>
-                <a href="#" className="dropdown-item">
-                  <button className="btn btn-success" onClick={handleLogin}>
-                    Login
-                  </button>
-                </a>
+                <button
+                  className="btn btn-success"
+                  onClick={handleLogin}
+                  style={{ backgroundColor: "#926dde" }}
+                >
+                  Login
+                </button>
               </div>
             </div>
           </div>
